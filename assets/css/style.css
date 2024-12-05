@@ -346,35 +346,39 @@ h3 {
 }
 
 /*--------project info*/
+/* Projects Outer Div */
 .projects-outer-div {
     width: 100%;
     margin: auto;
     border-radius: 10px;
     overflow-x: auto; /* Enable horizontal scroll */
     white-space: nowrap; /* Prevent inner divs from wrapping */
-    height: auto; /* Adjust height dynamically */
-    padding: 10px;
+    height: auto;
   }
   
-  .projects-social-media {
-    display: flex;
-    gap: 10px;
-    margin-top: 13px;
-  }
-  
-  /* Inner div styling */
+  /* Project Inner Div Styling */
   .projects-inner-div {
-    display: inline-block; /* Inline-block for horizontal layout */
-    margin-right: 20px; /* Space between divs */
+    display: inline-block;
+    margin-right: 20px;
     border-radius: 10px;
-    width: 300px; /* Adjusted width for better responsiveness */
-    height: auto; /* Allow height to adjust dynamically */
+    width: 300px;
+    height: auto;
     padding: 15px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    vertical-align: top; /* Align inner divs vertically */
+    vertical-align: top;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.5s ease;
+    transition: .4s;
   }
   
-  /* Content alignment and spacing */
+  /* Add hover effect */
+  .projects-inner-div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Text Styling */
   .projects-inner-div h2 {
     margin: 0;
     margin-bottom: 10px;
@@ -388,47 +392,65 @@ h3 {
     font-size: 0.95rem;
   }
   
-  /* Image styling */
+  /* Image Styling */
   .projects-inner-div img {
-    width: 100%; /* Make images responsive */
-    max-width: 100%; /* Prevent oversizing */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     display: block;
     margin: auto;
   }
   
-  /* Hide scrollbar for a cleaner look */
-  .projects-outer-div::-webkit-scrollbar {
-    height: 3px; 
+  /* Social Media Icons */
+  .projects-social-media {
+    display: flex;
+    gap: 10px;
+    margin-top: 13px;
   }
   
-  /* Responsive design */
+  /* Hide scrollbar for a cleaner look */
+  .projects-outer-div::-webkit-scrollbar {
+    height: 3px;
+  }
+  
+  /* Responsive Design */
   @media (max-width: 768px) {
     .projects-outer-div {
-      height: auto; /* Adjust height to content */
+      display: flex;
+      flex-direction: column; /* Stack inner divs vertically */
+      align-items: center; /* Center align the content */
+      white-space: normal; /* Allow wrapping */
     }
   
     .projects-inner-div {
       width: 90%; /* Use most of the screen width */
-      margin-right: 10px;
+      margin-bottom: 20px;
       padding: 10px;
     }
   
     .projects-inner-div h2 {
-      font-size: 1rem; /* Smaller font size */
+      font-size: 1rem;
     }
   
     .projects-inner-div p {
       font-size: 0.85rem;
     }
+  }
   
-    .projects-inner-div img {
-      height: auto; /* Maintain aspect ratio */
-      max-width: 100%; /* Fit within container */
+  /* Animation Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
+  
   
   /* Additional breakpoint for very small screens */
   @media (max-width: 480px) {
@@ -844,7 +866,6 @@ footer {
 
 /* General section styling */
 .video-section {
-    padding: 50px 15px;
     background-color: #f9f9f9;
     text-align: center;
 }
