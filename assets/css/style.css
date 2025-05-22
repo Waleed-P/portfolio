@@ -355,13 +355,23 @@ h3 {
     white-space: nowrap; /* Prevent inner divs from wrapping */
     height: auto;
   }
+.project-points {
+  text-align: left;
+  padding-left: 1.5rem;
+  word-wrap: break-word;       /* Allows long words to break */
+  overflow-wrap: break-word;   /* Modern alternative, ensures wrapping */
+  white-space: normal;  
+  padding-top: 1rem;       /* Allows text to wrap normally */
+}
+
   
   /* Project Inner Div Styling */
   .projects-inner-div {
+    margin-bottom: 1rem;
     display: inline-block;
     margin-right: 20px;
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
     height: auto;
     padding: 15px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);

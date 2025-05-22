@@ -33,7 +33,7 @@ function myMenuFunction(){
 
 /* ----- TYPING EFFECT ----- */
  var typingEffect = new Typed(".typedText",{
-    strings : ["Waleed"],
+    strings : ["Waleed","a Full stack developer","a Flutter Developer"],
     loop : true,
     typeSpeed : 100, 
     backSpeed : 80,
